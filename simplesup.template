@@ -1,0 +1,2 @@
+{variables, [{appid, "myapp"}, {supid, "my"}]}.
+{template, "simplesup.erl", "src/{{appid}}_{{supid}}_sup.erl"}.

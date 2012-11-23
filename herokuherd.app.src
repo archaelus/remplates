@@ -1,0 +1,18 @@
+{application, {{appid}},
+ [
+   {description, "{{appid}}"}
+  ,{vsn, "0.1.0"}
+  ,{registered, [{{appid}}_sup]}
+  ,{applications,
+    [kernel
+     ,stdlib
+     ,cowboy
+    ]}
+  ,{mod, { lm_app, []}}
+  ,{env,
+    [{http_listen_port, 9880}
+    ]}
+  ,{start_phases,
+    [{listen, []}
+    ]}
+ ]}.

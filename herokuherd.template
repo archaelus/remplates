@@ -1,0 +1,10 @@
+{variables, [{appid, "myapp"}]}.
+{template, "simpleapp.erl", "src/{{appid}}.erl"}.
+{template, "herokuherd.app.src", "src/{{appid}}.app.src"}.
+{template, "herokuherd_app.erl", "src/{{appid}}_app.erl"}.
+{template, "herokuherd_sup.erl", "src/{{appid}}_sup.erl"}.
+{template, "herokuherd_http_handler.erl", "src/{{appid}}_http_handler.erl"}.
+{template, "simplelogging.hrl", "include/{{appid}}_log.hrl"}.
+{template, "herokuherd_rebar.config", "rebar.config"}.
+{template, "simpleapp_gitignore", ".gitignore"}.
+{template, "herokuapp_procfile", "Procfile"}.

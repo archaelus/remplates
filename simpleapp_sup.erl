@@ -2,7 +2,7 @@
 %% @copyright You, 2036
 %% @author You <erlanghacker@example.com>
 %% @version {@vsn}, {@date} {@time}
-%% @doc {{supid}} top level supervisor
+%% @doc {{appid}} top-level supervisor
 %% @end
 %%%-------------------------------------------------------------------
 -module({{appid}}_sup).
@@ -20,7 +20,11 @@
 %%====================================================================
 %% API functions
 %%====================================================================
-
+%%--------------------------------------------------------------------
+%% @spec start_link() -> {ok,Pid} | ignore | {error,Error}
+%% @doc: Starts the supervisor
+%% @end
+%%--------------------------------------------------------------------
 start_link() ->
     supervisor:start_link({local, ?SERVER}, ?MODULE, []).
 
@@ -30,10 +34,7 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok,
-     {{one_for_all, 0, 1},
-      [
-      ]}}.
+    {ok, { {one_for_all, 0, 1}, []} }.
 
 %%====================================================================
 %% Internal functions

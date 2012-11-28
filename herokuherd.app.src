@@ -8,7 +8,7 @@
      ,stdlib
      ,cowboy
     ]}
-  ,{mod, { lm_app, []}}
+  ,{mod, { {{appid}}_app, []} }
   ,{env,
     [{http_listen_port, 9880}
     ]}

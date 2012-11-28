@@ -8,3 +8,4 @@
 {template, "herokuherd_rebar.config", "rebar.config"}.
 {template, "simpleapp_gitignore", ".gitignore"}.
 {template, "herokuapp_procfile", "Procfile"}.
+{template, "heroku_otp_version", ".preferred_otp_version"}.

@@ -7,3 +7,5 @@
 {template, "simple_rebar.config", "rebar.config"}.
 {template, "simpleapp_gitignore", ".gitignore"}.
 {template, "herokuapp_procfile", "Procfile"}.
+{template, "LICENSE", "LICENSE"}.
+{template, "README.md", "README.md"}.

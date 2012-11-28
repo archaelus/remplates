@@ -47,11 +47,9 @@ start_phase(listen, _Type, _Args) ->
     Dispatch = [{'_',
                  [{'_', {{appid}}_http_handler, []}]}
                ],
-    cowboy:start_listener(http, 100,
-                          cowboy_tcp_transport,
-                          [{port, config(http_listen_port)}],
-                          cowboy_http_protocol,
-                          [{dispatch, Dispatch}]),
+    cowboy:start_http(?APP,100,
+                      [{port, config(http_listen_port)}],
+                      [{dispatch, Dispatch}]),
     ok.
 
 %%%===================================================================

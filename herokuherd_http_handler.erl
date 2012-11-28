@@ -1,5 +1,5 @@
 %% @copyright You (2013)
-%% @author Geoff Cant <nem@erlang.geek.nz>
+%% @author You <you@example.com>
 %% @version {@vsn}, {@date} {@time}
 %% @doc Default HTTP handler for {{appid}}.
 %% @end

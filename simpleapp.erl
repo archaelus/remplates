@@ -1,6 +1,6 @@
 %%%-------------------------------------------------------------------
-%% @copyright Geoff Cant
-%% @author Geoff Cant <nem@erlang.geek.nz>
+%% @copyright You (2013)
+%% @author You <you@example.com>
 %% @version {@vsn}, {@date} {@time}
 %% @doc {{appid}} public API
 %% @end

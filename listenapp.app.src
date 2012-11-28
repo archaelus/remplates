@@ -1,0 +1,17 @@
+{application, {{appid}},
+ [
+   {description, "{{appid}}"},
+  ,{vsn, "0.1.0"}
+  ,{registered, [{{appid}}_sup]}
+  ,{applications,
+    [kernel
+     ,stdlib
+    ]}
+  ,{mod, { {{appid}}, []} }
+  ,{env,
+    [
+    ]}
+  ,{start_phases,
+    [{listen, []}
+    ]}
+ ]}.

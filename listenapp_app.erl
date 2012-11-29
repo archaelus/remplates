@@ -5,6 +5,7 @@
 %% @doc {{appid}} OTP application callback module
 %% @end
 %%%-------------------------------------------------------------------
+
 -module({{appid}}_app).
 
 -behaviour(application).

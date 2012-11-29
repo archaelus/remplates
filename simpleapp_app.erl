@@ -1,10 +1,11 @@
 %%%-------------------------------------------------------------------
 %% @copyright You (2013)
-%% @author Geoff Cant <nem@erlang.geek.nz>
+%% @author You <you@example.com>
 %% @version {@vsn}, {@date} {@time}
 %% @doc {{appid}} OTP application callback module
 %% @end
 %%%-------------------------------------------------------------------
+
 -module({{appid}}_app).
 
 -behaviour(application).

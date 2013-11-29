@@ -1,4 +1,9 @@
-{variables, [{appid, "myapp"}]}.
+{variables, [{appid, "myapp"}
+            ,{copyright_year, "2013"}
+            ,{copyright_holder, "Geoff Cant"}
+            ,{author_name, "Geoff Cant"}
+            ,{author_email, "nem@erlang.geek.nz"}
+            ]}.
 {template, "simpleapp.erl", "src/{{appid}}.erl"}.
 {template, "otplib.app.src", "src/{{appid}}.app.src"}.
 {template, "simplelogging.hrl", "include/{{appid}}_log.hrl"}.

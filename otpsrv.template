@@ -1,8 +1,8 @@
 {variables, [{appid, "myapp"}
-            ,{supid, "my"}
+            ,{srvid, "mysrv"}
             ,{copyright_year, "2013"}
             ,{copyright_holder, "Geoff Cant"}
             ,{author_name, "Geoff Cant"}
             ,{author_email, "nem@erlang.geek.nz"}
             ]}.
-{template, "simplesup.erl", "src/{{appid}}_{{supid}}_sup.erl"}.
+{template, "otp_srv.erl", "src/{{appid}}_{{srvid}}.erl"}.

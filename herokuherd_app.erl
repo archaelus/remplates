@@ -1,7 +1,6 @@
 %%%-------------------------------------------------------------------
-%% @copyright You (2013)
-%% @author You <you@example.com>
-%% @version {@vsn}, {@date} {@time}
+%% @copyright {{copyright_holder}} ({{copyright_year}})
+%% @author {{author_name}} <{{author_email}}>
 %% @doc {{appid}} OTP application callback module.
 %% @end
 %%%-------------------------------------------------------------------
@@ -16,14 +15,16 @@
 -export([start_phase/3, start/2, stop/1]).
 
 -export([config/0, config/1, config/2,
-         start/0, a_start/2]).
+         start/0]).
+
+-export([update_dispatch_rules/0]).
 
 %%%===================================================================
 %%% Convenience Functions
 %%%===================================================================
 
 start() ->
-    a_start(?APP, permanent).
+    application:ensure_all_started(?APP, permanent).
 
 config(Key, Default) ->
     case application:get_env(?APP, Key) of
@@ -40,37 +41,38 @@ config(Key) ->
 config() ->
     application:get_all_env(?APP).
 
+update_dispatch_rules() ->
+    cowboy:set_env(?APP,
+                   dispatch,
+                   cowboy_router:compile(dispatch_rules())).
 
 %% ===================================================================
 %% Application callbacks
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
+    stillir:set_config(?APP, env_specs()),
     {{appid}}_sup:start_link().
 
 stop(_State) ->
     ok.
 
 start_phase(listen, _Type, _Args) ->
-    Dispatch = [{'_',
-                 [{'_', {{appid}}_http_handler, []}]}
-               ],
-    cowboy:start_http(?APP,100,
+    Dispatch = cowboy_router:compile(dispatch_rules()),
+    cowboy:start_http(?APP, config(http_acceptors),
                       [{port, config(http_listen_port)}],
-                      [{dispatch, Dispatch}]),
+                      [{env, [{dispatch, Dispatch}]}]),
     ok.
+
+dispatch_rules() ->
+    [{'_',
+      [{'_', {{appid}}_http_handler, []}]}
+    ].
 
 %%%===================================================================
 %%% Internal functions
 %%%===================================================================
 
-a_start(App, Type) ->
-    start_ok(App, Type, application:start(App, Type)).
-
-start_ok(_App, _Type, ok) -> ok;
-start_ok(_App, _Type, {error, {already_started, _App}}) -> ok;
-start_ok(App, Type, {error, {not_started, Dep}}) ->
-    ok = a_start(Dep, Type),
-    a_start(App, Type);
-start_ok(App, _Type, {error, Reason}) ->
-    erlang:error({app_start_failed, App, Reason}).
+env_specs() ->
+    [{http_listen_port, "PORT", [{transform, integer}]}
+     ].

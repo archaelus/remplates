@@ -1,12 +1,14 @@
-%% @copyright You (2013)
-%% @author You <you@example.com>
-%% @version {@vsn}, {@date} {@time}
-%% @doc Default HTTP handler for {{appid}}.
+%%%-------------------------------------------------------------------
+%% @copyright {{copyright_holder}} ({{copyright_year}})
+%% @author {{author_name}} <{{author_email}}>
+%% @doc Default Cowboy HTTP handler for {{appid}}.
 %% @end
+%%%-------------------------------------------------------------------
+
 -module({{appid}}_http_handler).
 
 -behaviour(cowboy_http_handler).
--export([init/3, handle/2, terminate/2]).
+-export([init/3, handle/2, terminate/3]).
 
 -include("include/{{appid}}_log.hrl").
 
@@ -20,5 +22,5 @@ handle(Req, State) ->
                                   Req),
     {ok, Req2, State}.
 
-terminate(_Req, _State) ->
+terminate(_Reason, _Req, _State) ->
     ok.

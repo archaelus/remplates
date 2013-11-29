@@ -1,4 +1,9 @@
-{variables, [{appid, "myapp"}]}.
+{variables, [{appid, "myapp"}
+            ,{copyright_year, "2013"}
+            ,{copyright_holder, "Geoff Cant"}
+            ,{author_name, "Geoff Cant"}
+            ,{author_email, "nem@erlang.geek.nz"}
+            ]}.
 {template, "simpleapp.erl", "src/{{appid}}.erl"}.
 {template, "herokuherd.app.src", "src/{{appid}}.app.src"}.
 {template, "herokuherd_app.erl", "src/{{appid}}_app.erl"}.
@@ -9,3 +14,4 @@
 {template, "simpleapp_gitignore", ".gitignore"}.
 {template, "herokuapp_procfile", "Procfile"}.
 {template, "heroku_otp_version", ".preferred_otp_version"}.
+{template, "dot_edts", ".edts"}.

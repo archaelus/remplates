@@ -1,1 +1,2 @@
-web: erl -pa ebin -env ERL_LIBS deps -s {{appid}}_app -noshell -noinput -{{appid}} http_listen_port $PORT
+web: erl -pa ebin -env ERL_LIBS deps -s {{appid}}_app -noshell -noinput -boot start_sasl -{{appid}} http_listen_port $PORT
+web_dev: erl -pa ebin -env ERL_LIBS deps -s {{appid}}_app -boot start_sasl -{{appid}} http_listen_port $PORT

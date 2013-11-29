@@ -1,10 +1,10 @@
 %%%-------------------------------------------------------------------
-%% @copyright You, 2036
-%% @author You <erlanghacker@example.com>
-%% @version {@vsn}, {@date} {@time}
+%% @copyright {{copyright_holder}} ({{copyright_year}})
+%% @author {{author_name}} <{{author_email}}>
 %% @doc {{supid}} supervisor
 %% @end
 %%%-------------------------------------------------------------------
+
 -module({{appid}}_{{supid}}_sup).
 
 -behaviour(supervisor).

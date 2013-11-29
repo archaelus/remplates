@@ -1,10 +1,10 @@
 %%%-------------------------------------------------------------------
-%% @copyright You (2013)
-%% @author You <you@example.com>
-%% @version {@vsn}, {@date} {@time}
+%% @copyright {{copyright_holder}} ({{copyright_year}})
+%% @author {{author_name}} <{{author_email}}>
 %% @doc {{appid}} public API
 %% @end
 %%%-------------------------------------------------------------------
+
 -module({{appid}}).
 
 %% API

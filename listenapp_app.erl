@@ -1,8 +1,7 @@
 %%%-------------------------------------------------------------------
-%% @copyright You (2013)
-%% @author You <you@example.com>
-%% @version {@vsn}, {@date} {@time}
-%% @doc {{appid}} OTP application callback module
+%% @copyright {{copyright_holder}} ({{copyright_year}})
+%% @author {{author_name}} <{{author_email}}>
+%% @doc {{appid}} OTP application callback module.
 %% @end
 %%%-------------------------------------------------------------------
 

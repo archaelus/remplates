@@ -1,8 +1,7 @@
-{variables, [{appid, "myapp"}
-            ,{supid, "my"}
+{variables, [{test, "mytest"}
             ,{copyright_year, "2013"}
             ,{copyright_holder, "Geoff Cant"}
             ,{author_name, "Geoff Cant"}
             ,{author_email, "nem@erlang.geek.nz"}
             ]}.
-{template, "simplesup.erl", "src/{{appid}}_{{supid}}_sup.erl"}.
+{template, "simple_SUITE.erl", "test/{{test}}_SUITE.erl"}.

@@ -10,7 +10,7 @@
 -behaviour(cowboy_http_handler).
 -export([init/3, handle/2, terminate/3]).
 
--include("include/{{appid}}_log.hrl").
+-include("{{appid}}_log.hrl").
 
 init({_Any, http}, Req, []) ->
     {ok, Req, undefined}.

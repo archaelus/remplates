@@ -1,0 +1,7 @@
+{variables, [{appid, "myapp"}
+            ,{copyright_year, "2013"}
+            ,{copyright_holder, "Geoff Cant"}
+            ,{author_name, "Geoff Cant"}
+            ,{author_email, "nem@erlang.geek.nz"}
+            ]}.
+{template, "herokuherd_http_handler.erl", "src/{{appid}}_http_handler.erl"}.

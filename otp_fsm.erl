@@ -5,7 +5,7 @@
 %% @end
 %%%-------------------------------------------------------------------
 
--module({{appid}}_{{fsmid}}).
+-module({{appid}}_{{fsmid}}_fsm).
 
 -behaviour(gen_fsm).
 

@@ -46,6 +46,10 @@ disconnected(Event, State) ->
     ?WARN("[state: disconnected] Unhandled event: ~p", [Event]),
     {next_state, disconnected, State}.
 
+disconnected(Event, _From, State) ->
+    ?WARN("[state: disconnected] Unhandled event: ~p", [Event]),
+    {next_state, disconnected, State}.
+
 %% gen_fsm callbacks
 %% @private
 handle_event(Event, StateName, State) ->
